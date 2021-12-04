@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #fff0dc;
+}
+
+.tag-wrap {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.tag {
+  background: #FB8C00;
+  color: #222;
+  padding: 2rem 3rem 2rem 4rem;
+  font: bold 32px system-ui;
+  clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%);
+}

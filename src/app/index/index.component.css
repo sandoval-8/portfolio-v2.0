@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../../../src/assets/fuentes/Roboto/Roboto-Light.ttf') format('ttf'),
+  url('../../../src/assets/fuentes/Roboto/Roboto-Light.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+.seccion-body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../src/assets/background/background-1.png");
+  background-size: 100vw, 100vh;
+}
+.corte {
+  -webkit-clip-path: polygon(0 0, 88% 0, 68% 100%, 0% 100%);
+  clip-path: polygon(0 0, 88% 0, 68% 100%, 0% 100%);
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  margin-bottom: 40px;
+}
+.user{
+  /* cambia estos dos valores para definir el tamaño de tu círculo */
+  height: 100px;
+  width: 100px;
+  /* los siguientes valores son independientes del tamaño del círculo */
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+}
+.left, .right {
+  font-family: "Roboto Light";
+}
