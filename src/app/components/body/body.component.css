@@ -1,0 +1,90 @@
+.seccion-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  background-image: url("../../../src/assets/background/background-1.png"); */
+  background-color: #00AEC3;
+  background-size: 100vw, 100vh;
+}
+.corte {
+  -webkit-clip-path: polygon(0 0, 84% 0, 72% 88%, 0% 100%);
+  clip-path: polygon(0 0, 84% 0, 72% 88%, 0% 100%);
+  /*
+  -webkit-clip-path: polygon(0 0, 88% 0, 68% 100%, 0% 100%);
+  clip-path: polygon(0 0, 88% 0, 68% 100%, 0% 100%);
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  margin-bottom: 40px; */
+}
+.segundoCorte {
+  -webkit-clip-path: polygon(25% 15%, 100% 1%, 100% 100%, 7% 86%);
+  clip-path: polygon(25% 15%, 100% 1%, 100% 100%, 7% 86%);
+}
+.user{
+  /* cambia estos dos valores para definir el tamaño de tu círculo */
+  height: 100px;
+  width: 100px;
+  /* los siguientes valores son independientes del tamaño del círculo */
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+}
+.left, .right {
+  font-family: "Roboto Light";
+}
+.presentacion::before {
+}
+.seccion-body corte {
+  position: absolute;
+}
+.presentacion {
+  position: absolute;
+  top: 0;
+  background-color: rgb(255,255,255,0);
+  z-index: 5;
+  padding-left: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Roboto Light';
+  font-size: 80px;
+  color: #8E9092;
+}
+.presentacion div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(209, 201, 201, 0.5);
+  width: 680px;
+  border-radius: 15px;
+}
+.presentacion p:nth-child(1){
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-stroke: 2px #000000;
+  font-size: 90px;
+  color: #ffffff;
+  /*
+    background: linear-gradient(to right, black 0%, black 50%, white 50%, white 100% );
+    color: white;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 150px; */
+}
+.presentacion p:nth-child(2){
+  font-size: 50px;
+  color: #FFFFFF;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-stroke: 1px #000000;
+}
+.contenedor-principal {
+  position: relative;
+}

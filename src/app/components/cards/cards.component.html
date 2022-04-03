@@ -1,0 +1,35 @@
+<div class="body" style="display: flex; justify-content: center; align-items: center;">
+  <div class="contenido">
+    <div class="card">
+
+      <!--<img class="card-img-top" src="/assets/background/background-1.png" alt="">-->
+     <!-- <img class="card-img-top" src="{{URL}}/photo/{{post.photo_id![0]}}" alt=""> -->
+     <img class="card-img-top" src="C:\Users\lucas\Desktop\portfolio-v2.0 (workspace)\portfolio-mvc\src\upload\1920x1080.png" alt="">
+     {{photo.path | json}} kdfjksdj 
+
+      <div class="card-body">
+        <div class="absolute">
+          <h5 class="card-title">{{post.title}}</h5>
+        </div>
+        <div class="content-card">
+          <header>
+            <!-- TITULO, HASHTAGS, PRESENTACION -->
+            <a>#Docker</a><a>#JavaEE</a><a>#SpringBoot</a>
+            <p class="card-text">{{post.presentation}}</p>
+          </header>
+
+          <div class="row-button">
+            <!-- CONTENEDOR DE BOTONES -->
+            <button (click)="abrirModal()" class="btn btn-primary">Ver proyecto</button>
+            <button href="#" class="btn btn-secondary">Ver en Github</button>
+          </div>
+
+          <footer>
+            <!-- FOOTER -->
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

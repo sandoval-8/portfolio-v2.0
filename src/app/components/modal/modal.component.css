@@ -1,0 +1,125 @@
+#container-primary-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+#container-secondary-modal {
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    width: 92vw;
+    height: auto; /*La altura debería ser AUTO*/
+    overflow: hidden;
+
+}
+/*----------------*/
+#container-terciary-modal {
+    display: flex;
+    width: 100%;
+    height: auto; /*La altura debería ser AUTO*/
+}
+#container-left {
+    width: 70%;
+    background-color: springgreen;
+    display: flex;
+    position: relative;
+}
+/*#container-left img {
+    height: 100%;
+}*/
+#carrousel {
+    display: flex;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    overflow: hidden;
+}
+#carrousel img{
+    width: 100%;
+}
+#carrouselSlider {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 0%;
+    top: 0%;
+}
+.flechas-modal {
+    position: absolute;
+    z-index: 51;
+    opacity: 0.7;
+    width: 30px;
+    height: 30px;
+}
+.izquierda {
+    top: 46%;
+    left: 0;
+    cursor: pointer;
+}
+.derecha {
+    top: 46%;
+    right: 0px;
+    cursor: pointer;
+}
+#position-carrousel {
+    height: 20px; 
+    width: auto;
+    bottom: 20px;
+    left: 46%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+#position-carrousel img {
+    margin: auto 6px;
+    width: 8px;
+    height: 8px;
+    display: inline;
+    cursor: pointer;
+}
+#position-carrousel img:hover {
+    
+    margin: auto 6px;
+    width: 12px;
+    height: 12px;
+}
+/*------------------*/
+#container-right {
+    width: 30%;
+    max-height: 80vh;
+}
+#header-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    font-family: 'Roboto Regular';
+}
+#header-modal h2 {
+    text-align: center;
+}
+#body-modal {
+    height: 65%;
+    display: block;
+    resize: none;
+    padding: 0px 10px 10px 10px;
+    font-family: 'Roboto Light';
+    overflow: auto;
+}
+#body-modal::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(235, 235, 235);
+}
+#body-modal::-webkit-scrollbar-thumb {
+    background-color: rgb(182, 182, 182);
+    border-radius: 5px;
+}
+#footer-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+}

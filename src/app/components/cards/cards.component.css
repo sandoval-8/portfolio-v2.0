@@ -1,0 +1,56 @@
+.body {
+  height: 340px;
+}
+.card {
+  width: 20rem;
+  border: 1px solid black;
+}
+.card-body {
+  position: relative;
+  border-top: 0px;
+  padding: 0px;
+  z-index: 10;
+}
+.absolute {
+  display: flex;
+  position: relative;
+  border-top: 0px;
+  margin-top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  background-color: #51A351;
+}
+header {
+  padding: 20px;
+}
+a {
+/*  border: 1px solid #55B8BF; */
+  color: #008;
+  padding: 1px 2px;
+  margin-right: 3px;
+  border-radius: 4px;
+}
+.absolute h5 {
+  font-family: "Roboto Light";
+  font-size: 2em;
+}
+.content-card {
+  position: relative;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(0, 136, 255, 0);
+}
+header h5 {
+  text-align: center;
+}
+.row-button {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px 20px 20px;
+}

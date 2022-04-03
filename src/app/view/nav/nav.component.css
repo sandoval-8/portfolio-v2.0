@@ -1,0 +1,12 @@
+nav {
+  padding: 10px;
+  background-color: #444444;
+}
+ul {
+  display: flex;
+  justify-content: right;
+}
+li:nth-last-child(1){
+  margin-right: 60px;
+}
+

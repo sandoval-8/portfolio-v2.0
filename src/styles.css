@@ -1,7 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('./assets/fuentes/Roboto/Roboto-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quicksand-Bold';
+  src: url('./assets/fuentes/Quicksand/Quicksand-Bold.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0px;
   padding: 0px;
   border: 0px;
   box-sizing: border-box;
+}
+body {
+  background-color: #2F3136;
 }

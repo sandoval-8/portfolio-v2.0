@@ -1,0 +1,77 @@
+<div id="container-primary-modal">
+    <div id="container-secondary-modal">
+        <div id="container-terciary-modal">
+
+            <!-- LADO IZQ | MUESTRA FOTOS DEL PROYECTO -->
+            <div id="container-left">
+                <img src="../../../assets/muestra/flecha-izquierda.png" (click)="nextSlide('_IZQ')"
+                    class="flechas-modal izquierda" style="width:50px;height:50px;" alt="">
+                <div class="flechas-modal" id="position-carrousel">
+                    <img src="../../../assets/muestra/circulo.png" alt="">
+                    <img src="../../../assets/muestra/circulo.png" alt="">
+                    <img src="../../../assets/muestra/circulo.png" alt="">
+                    <img src="../../../assets/muestra/circulo.png" alt="">
+                </div>
+                <div id="carrousel">
+                    <div id="carrouselSlider">
+                        <img src="{{post.photo}}" alt="">
+                    <!--    <img src="{{URL}}/photo/{{post.photo_id![0]}}" alt=""> -->
+                    <!--    <img src="../../../assets/muestra/1366x768(2).png" alt="">
+                        <img src="../../../assets/muestra/1366x768(3).png" alt=""> -->
+                    </div>
+                </div>
+                <img src="../../../assets/muestra/flecha-derecha.png" (click)="nextSlide('_DER')"
+                    class="flechas-modal derecha" style="width:50px;height:50px;" alt="">
+            </div>
+
+            <!-- LADO DER | MUESTRA INFO DEL PROYECTO -->
+            <div id="container-right">
+                <div id="header-modal">
+                  <!--  <h2>Titulo del Proyecto</h2> -->
+                    <h2>{{post.title}}</h2>
+                </div>
+                <div id="body-modal">
+                    <p>
+                        {{post.description}}
+                    <!--   Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br>
+                        Descripcion del proyecto y las tecnologías que integra Descripcion del proyecto y las
+                        tecnologías que integra <br> --> 
+                    </p>
+
+                </div>
+                <div id="footer-modal">
+                    <button href="#" class="btn btn-secondary">Ver en Github</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
