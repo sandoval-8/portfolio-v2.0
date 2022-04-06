@@ -27,7 +27,7 @@ export class CardsComponent implements OnInit, DoCheck {
   }
   ngDoCheck(): void {
     this.photo =  ((this.post.photo) as Photo);
-    console.log("PATH 3:" + JSON.stringify(this.photo.path));
+    console.log("PATH 3:" + JSON.stringify(this.photo.nameResource));
   }
 
   ngOnInit(): void {
