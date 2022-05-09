@@ -13,23 +13,19 @@ export class BodyTestComponent implements OnInit {
 
   modalVisible: boolean = false;
   posts:Post[] = [];
+  photos:Photo[] = [];
   openModalPost:Post = {}
   allPost:Subscription = new Subscription();
 
   constructor(private postClient:PostService) { }
 
   ngOnInit(): void {
-    //Busca todos los usuarios
-    console.log("SE EJECUTO BODY");
+    //Busca todos los posteos
     this.allPost = this.postClient.getAllPost().subscribe((responsePosts) => {
-      this.posts = responsePosts;
-      
-      console.log("---TEST----:" + ((responsePosts[0].photo) as Photo).path);
-      console.log("ARRAY-POST:" + this.posts.length + " " + this.posts.toString);
-      
+      this.posts = responsePosts;      
     });
   }
-
+  
   //Muestra el modal
   modalIsVisible(evento?:Post) {
     if(evento != undefined){

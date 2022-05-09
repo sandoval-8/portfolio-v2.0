@@ -5,7 +5,7 @@ export interface Post {
     title?:string,
     description?:string,
     presentation?:string,
-    photo?:Photo[],
+    samplePhoto?:Photo,
     enable?:boolean,
     visible?:boolean,
 }

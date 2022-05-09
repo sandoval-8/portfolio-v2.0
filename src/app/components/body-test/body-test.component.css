@@ -93,6 +93,7 @@
 .contenedorHijo{
   background-color: #40444B;
   border-radius: 10px;
+  padding-top: 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

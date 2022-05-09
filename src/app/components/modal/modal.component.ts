@@ -1,6 +1,9 @@
-import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, DoCheck, EventEmitter, HostListener, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Conexion } from 'src/app/backend/conexion';
+import { Photo } from 'src/app/model/photo';
 import { Post } from 'src/app/model/post';
+import { PhotoService } from 'src/app/service/photoservice/photo.service';
+import { environment } from 'src/environments/environment';
 
 interface post {
 
@@ -11,7 +14,7 @@ interface post {
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, DoCheck {
 
   @Output()
   modalVisible:EventEmitter<null> = new EventEmitter();
@@ -19,11 +22,21 @@ export class ModalComponent implements OnInit {
   @Input()
   post:Post = {}
 
-  URL:string = Conexion.url;
+  URL_REQUEST_IMG:string = environment.backend + "/photo/";
 
-//  photo:Photo[] = []
+  photo:Photo[] = [];
+  photos:Array<Photo> = new Array();
 
-  constructor() { }
+  constructor(private clientePhoto:PhotoService) { }
+
+  ngDoCheck(): void {
+  //  this.photo =  ((this.post.photo) as Photo);
+  //  this.URL_PHOTO = this.URL + "/photo/" + this.photo.nameResource;
+  this.clientePhoto.getPhoto(this.post.id!).subscribe((photos) => {
+    this.photo = photos;
+  }).unsubscribe;
+ // this.URL_PHOTO.push(this.URL + "/photo/" + this.photo.nameResource);
+  }
 
   ngOnInit(): void {
   }

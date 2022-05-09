@@ -1,5 +1,7 @@
 import { Component, DoCheck, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { pipe, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Conexion } from 'src/app/backend/conexion';
 import { Photo } from 'src/app/model/photo';
 import { Post } from 'src/app/model/post';
@@ -10,41 +12,35 @@ import { PhotoService } from 'src/app/service/photoservice/photo.service';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
-export class CardsComponent implements OnInit, DoCheck {
+export class CardsComponent implements OnInit {
 
   URL:string = Conexion.url;
+
+  URL_PHOTO:string = '';
 
   @Output()
   modalVisible:EventEmitter<Post> = new EventEmitter();
 
   @Input()
-  post:Post = {}
+  post:Post = {} //
 
   photo:Photo = {}
 
-  constructor(private clientePhoto:PhotoService) { 
-    console.log("PATH 1:" + JSON.stringify(this.post.photo));
-  }
-  ngDoCheck(): void {
-    this.photo =  ((this.post.photo) as Photo);
-    console.log("PATH 3:" + JSON.stringify(this.photo.nameResource));
+  photoProfile:Photo = {}; //
+
+  constructor(private clientePhoto:PhotoService) {
   }
 
+  //Cuando llega un input nuevo Llama a la foto
   ngOnInit(): void {
-
-    this.clientePhoto
-    console.log("PATH 2:" + JSON.stringify(this.post.photo));
-
-    //Ya tenemos el POST, ahora recuperamos las imagenes (Plantea duda sobre BBDD, esta bien orquestada???)
-//    this.post.photo?.forEach((id)=> {
-//      this.clientePhoto.getPhoto(id).subscribe((photo)=> {
-//        this.photo.push(photo);
-//      });
-//    });    
+    this.clientePhoto.searchProfilePhoto(this.post.id!).subscribe((photos)=>{
+      this.photo = photos[0];
+      this.URL_PHOTO = this.URL + "/photo/" + this.photo.nameResource;
+    }
+    ).unsubscribe;
   }
-
+  
   abrirModal() {
-    console.log("Se emitio el evento que abre el MODAL")
     this.modalVisible.emit(this.post);
   }
 

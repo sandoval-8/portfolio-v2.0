@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Conexion } from 'src/app/backend/conexion';
 import { Post } from 'src/app/model/post';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ import { Post } from 'src/app/model/post';
 // ================================================
 export class PostService {
 
-  url:string = Conexion.url;
-  
+  //url:string = Conexion.url;
+  url:string = environment.backend;
 
   constructor(private httpclient:HttpClient) { }
 

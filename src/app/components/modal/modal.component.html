@@ -14,7 +14,7 @@
                 </div>
                 <div id="carrousel">
                     <div id="carrouselSlider">
-                        <img src="{{post.photo}}" alt="">
+                        <img src="{{URL_REQUEST_IMG + singlePhoto.nameResource}}" alt="" *ngFor="let singlePhoto of photo">
                     <!--    <img src="{{URL}}/photo/{{post.photo_id![0]}}" alt=""> -->
                     <!--    <img src="../../../assets/muestra/1366x768(2).png" alt="">
                         <img src="../../../assets/muestra/1366x768(3).png" alt=""> -->
